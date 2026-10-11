@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!<!DOCTYPE html><html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +9,43 @@
     <header>
         <h1>DevShowcase</h1>
         <p>Seu espaço para apresentar projetos de tecnologia.</p>
-    </header>
+    </header><main>
+    <section class="intro">
+        <h2>Projetos em destaque</h2>
+        <p>Conheça projetos, tecnologias e ideias de desenvolvedores.</p>
+        <button id="loadProjects">Carregar projetos</button>
+    </section>
 
-    <main>
-        <section class="intro">
-            <h2>Projetos em destaque</h2>
-            <p>Conheça projetos, tecnologias e ideias de desenvolvedores.</p>
-            <button id="loadProjects">Carregar projetos</button>
-        </section>
+    <section class="project-form">
+        <h2>Cadastrar projeto</h2>
 
-        <section id="projects" class="projects">
-            <p>Clique em "Carregar projetos" para visualizar os projetos.</p>
-        </section>
-    </main>
+        <form id="projectForm">
+            <label for="name">Nome do projeto</label>
+            <input type="text" id="name" name="name" required>
 
-    <footer>
-        <p>DevShowcase — Projeto Integrador</p>
-    </footer>
+            <label for="description">Descrição</label>
+            <textarea id="description" name="description" required></textarea>
 
-    <script src="script.js"></script>
+            <label for="url">Link do projeto</label>
+            <input type="url" id="url" name="url"
+                   placeholder="https://exemplo.com">
+
+            <button type="submit">Salvar projeto</button>
+        </form>
+
+        <p id="formMessage" role="status"></p>
+    </section>
+
+    <section id="projects" class="projects">
+        <p>Clique em "Carregar projetos" para visualizar os projetos.</p>
+    </section>
+</main>
+
+<footer>
+    <p>DevShowcase — Projeto Integrador</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
